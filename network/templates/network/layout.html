@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Social Network{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <nav class="navbar navbar-expand-lg navbar-light nv">
+                    <div class="text-center">
+                        <a class="navbar-brand text-primary" href="#">Network <i class="fab fa-twitter text-primary"></i> </a>
+                    </div>
+                  
+                    <div>
+                      <ul class="navbar-nav mr-auto nv-ul">
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile" href="javascript:profile('{{user.username}}' , '{{user.id}}' , '{{user.email}}')"><strong><i class="fa fa-user text-primary"></i> {{ user.username }}</strong></a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item">
+                          <a class="nav-link" id="allpost" href="{% url 'index' %}"><i class="fa fa-comments text-primary"></i> All Posts</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link" id="following" href="#"><i class="fa fa-users text-primary"></i> Following</a>
+                            </li>
+                            
+                            <li class="nav-item" style="width: 60%; margin: auto;">
+                                <a class="nav-link tweet-link bg-primary text-light" href="{% url 'logout' %}"><i class="fa fa-sign-out "></i> Log Out</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'login' %}"><i class="fa fa-sign-in text-primary"></i> Log In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'register' %}"><i class="fa fa-sign-in text-primary"></i> Register</a>
+                            </li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  </nav>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-9" style="background: #007bff; height:100vh">
+                <div class="body">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 navbar-light">
+                {% if user.is_authenticated %}
+                <div class="search-div">
+                    <div class="search">
+                        <form id="searchUser" style="display: flex;">
+                            <input id="searchInput" type="text" name="" id="" placeholder="Search .." style="font-size:15px; width: 80%;">
+                            <i id="search" style="font-size: 25px;" class="fa fa-search"></i>
+                        </form>
+                    </div>
+                    <div class="rund-follow" id="random-follow">
+                        
+                    </div>
+                </div>
+                {% else %}
+                <center class="cent">
+                    Register in order to take advantage of the wonderful features of the site .
+                </center>
+                {% endif %}
+            </div>
+        </div>
+        
+        <script src="{% static 'network/index.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>

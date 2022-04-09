@@ -1,0 +1,355 @@
+body{
+    color:rgba(0,0,0,.5);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none !important;
+}
+/* layout style */
+.body{
+    height: 100vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+.body::-webkit-scrollbar{
+    display: none;
+}
+
+.home{
+    padding: 0px;
+}
+@media (min-width:390px){
+    .home{
+        padding: 30px;
+    }
+    
+}
+.fa-search{
+    color: blue;
+    font-size: 30px;
+    width: 20%;
+    height: 100%;
+    margin: auto;
+    margin-top: 9px;
+}
+.navbar-brand{
+    font-weight: bold !important;
+    font-size: 30px !important;
+    font-family: emoji !important;
+    margin-top: 18px !important;
+}
+.nv{
+    display: block !important;
+    height: 100vh;
+    overflow: hidden;
+}
+.nv-ul{
+    display: block !important;
+}
+.nv-ul li{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.nv-ul li a{
+    font-size: 23px;
+}
+
+.tweet-link{
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+.tweet-link a{
+    color: #fff;
+}
+.log-out{
+    margin-top:150px !important;
+}
+
+/* new tweet style */
+.tweet-dad{
+    background: #fff;
+    padding: 4px;
+    border-radius: 10px;
+}
+.tweet-prof-img{
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding-top: 36px;
+}
+.tweet-prof-img i{
+    font-size: 50px;
+}
+.new-tweet{
+    width: 80%;
+    float: right;
+    padding-right: 25px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 3px;
+}
+.new-tweet textarea{
+    height: 120px;
+    border: none;
+    outline: none;
+    padding-top: 40px;
+    font-size: 20px;
+}
+.new-tweet textarea:focus{
+    font-size: 20px;
+}
+.new-tweet textarea::-webkit-scrollbar{
+    display: none;
+}
+.post{
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+.new-tweet .btn{
+    float: right;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.post-section{
+    clear: both;
+    padding: 20px;
+}
+
+.post-p{
+    border-top: 1px solid #eee;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.addComment{
+    width: 70%;
+    margin: auto;
+    border: 1px solid #e7e7e7;
+    border-radius: 40px;
+    overflow: hidden;
+    text-align: center;
+}
+.comText{
+    font-size: 14px;
+    /* border: none; */
+    outline: none;
+    /* background: #e7e7e7; */
+    line-height: 11px;
+    padding-top: 10px;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.comText::-webkit-scrollbar{
+    display: none;
+}
+.comInput{
+    max-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.displayComments{
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+    background: #e7e7e7;
+    height:320px;
+    padding-bottom: 9px;
+    padding-left: 28px;
+    padding-top: 29px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+.displayComments::-webkit-scrollbar{
+    display: none;
+}
+.comment{
+    background: #fff;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+/* profile section */
+.profile-background{
+    height: 250px;
+    background: #e9ecef;
+    margin-left: 17px;
+    border-radius: 10px;
+    border-top-right-radius: 132px;
+}
+
+.im-pr{
+    max-width: 55px;
+    max-height: 52px;
+    border-radius: 50%;
+    min-width: 55px;
+    min-height: 52px;
+}
+.profile-header{
+    width: 70%;
+    margin: auto;
+    margin-top: 2px;
+}
+.profile-img{
+    font-size: 100px;
+    background: darkgray;
+    z-index: 2;
+    margin-top: -75px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    border: 4px solid #fff;
+    background-size: cover;
+    background-position: center;
+}
+.button-edit{
+    border: 1px solid #eee;
+    border-radius: 20px;
+    height: 50px;
+    text-align: center;
+    padding: 4px;
+    padding-top: 11px;
+    background: #fff;
+    margin-top: 5px;
+}
+.btn-ed{
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+    font-weight: bold;
+    color: #007bff;
+}
+.username{
+    font-weight: bold;
+    color: #fff;
+    border-top: 1px solid;
+    margin-top: 13px;
+}
+.useremail{
+    color: #fff;
+}
+.description{
+    color: #fff;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 20px;
+}
+.size{
+    font-size: 23px;
+}
+.descProf{
+    display: block;
+    background: #fff;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    border: 1px solid cadetblue;
+}
+.descProf:hover{
+    outline: none;
+}
+#edit-desc{
+    border: none;
+    outline: none;
+}
+.inL{
+    font-family: ui-sans-serif;
+}
+.inP{
+    font-family: ui-sans-serif;
+}
+#save-edit-profile{
+    background: #007bff;
+    border: 1px solid #007bff;
+    margin-left: 3px;
+    margin-bottom: 4px;
+    color: #fff;
+}
+/* right-bar style */
+.cent{
+    color:rgba(0,0,0,.5);
+    font-size: 23px;
+    margin-top: 119px;
+    /* margin: auto; */
+    padding: 23px;
+}
+.search-div{
+    text-align: center;
+    margin-top: 60px;
+}
+.search{
+    border: 1px solid #eee;
+    height: 50px;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    padding: 4px;
+    margin: 60px;
+}
+.search form{
+    height: 100%;
+}
+.search form input{
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.parent{
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 70%;
+    margin: auto;
+}
+.parent span{
+    font-size: 16px;
+}
+.btn-follow{
+    font-weight: bold !important;
+}
+.rund-follow{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    height: 171px;
+    background: #e7e7e7;
+    border-radius: 10px;
+}
+@media (min-width:776px){
+    .rund-follow{
+        margin-right: 14px;
+    }
+    
+}
+.rund-follow .parent{
+    background: #fff;
+    border-radius: 12px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    max-height: 30px;
+    min-height: 30px;
+}
+.rund-follow::-webkit-scrollbar{
+    display: none;
+}

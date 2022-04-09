@@ -1,0 +1,89 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div id="home" class="home">
+        <h1 class="home" style="color: #fff; font-family: ui-sans-serif;">Home</h1>
+        {% if user.is_authenticated %}
+        <div class="tweet-dad d-flex justify-content-center ">
+          <div class="tweet-prof-img" id="tweet-prof-img"><i class="fa fa-user"></i></div>
+          <div class="new-tweet p-30">
+            <form id="form-new-tweet">
+                <textarea class="w-100" name="" id="textarea-post" cols="30" rows="10" placeholder="What's happening ?" autofocus></textarea>
+                <div class="mb-2" style="height: 2px;  background: #eee;"></div>
+                <input type="submit" class="btn btn-primary"  id="add-tweet" value="tweet" >
+            </form>
+          </div>
+      </div>
+      {% endif %}
+        <!---- post section ----->
+        <div class="post-section">
+          <div class="post-pack" id="post-pack">
+            
+          </div>
+          <div class="d-flex justify-content-center Page navigation" id="paginator" style="text-align: center;">
+            <div class="pagination" style="display: none;"  id="next">next</div>
+            <div class="pagination" style="display: none;" id="prev">prev</div>
+          </div>
+        </div>
+    </div>
+    <!---- profile section ----->
+    <div class="profile-page" id="profile-page" style="display: none;">
+      <div class="profile-section">
+        <div class="profile-background"></div>
+        <div class="profile-header d-flex justify-content-between">
+          <div class="profile-img" id="profile-img"></div> <!---<i class="fa fa-user"></i>-->
+          <div class="button-edit"><button class="btn-ed" id="btn-ed">Edit profile</button></div>
+        </div>
+        <div class="profile-info">
+          <div class="username size" id="profile-user"></div>
+          <div class="useremail" id="profile-email"></div>
+          <div class="description size" id="profile-desc"></div>
+          <div id="edit-div" style="display: none;">
+            <form>
+              <div class="username size" id="edit-profile-user">
+                <label class="inL" for="img-src">choose your picture</label>
+                <input class="btn inP" type="file" id="img-src" accept="image/*" />
+              </div>
+              <div class="description size descProf" id="edit-profile-desc" >
+                <textarea class="" autofocus placeholder="Add about you" name="" id="edit-desc" cols="30" rows="10" style="max-height: 100px; width: 100%;"></textarea>
+                <input class="btn btn-outline-secondary" type="button" id="save-edit-profile" value="Save">
+              </div>
+            </form>
+          </div>
+          <div class="btns-follows">
+            <div class="btn" style="background:#fff ;cursor:initial ;color:rgba(0,0,0,.5)" id="followers"></div>
+            <div class="btn" style="background:#fff ;cursor:initial ;color:rgba(0,0,0,.5)" id="follows"></div>
+            <div class="btn" style="font-weight: bold ;color: rgba(0,0,0,.5) ;background:#fff ;margin-left: 164px ;max-width: 100px ; float: right ; display:none ;" id="follow-btn">Follow</div>
+            <div class="btn" style="font-weight: bold ;color: rgba(0,0,0,.5) ;background:#fff ;margin-left: 164px ;max-width: 100px ; float: right ; display:none ;" id="unfollow-btn">unfollow</div>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="post-section">
+        <div class="post-pack" id="postd-pack">
+          
+        </div>
+        <div class="d-flex justify-content-center Page navigation" id="paginator" style="text-align: center;">
+          <div class="pagination" style="display: none;"  id="nextP">next</div>
+          <div class="pagination" style="display: none;" id="prevP">prev</div>
+        </div>
+      </div>
+    </div>
+    <!---- edit  profile section ----->
+    
+    <!---- end edit profile section ----->
+    <!---- following section ----->
+    <div class="post-section" id="following-page" >
+      <div class="post-pack" id="ppack">
+       
+      </div>
+      <div class="d-flex justify-content-center Page navigation" id="paginator" style="text-align: center;">
+        <div class="pagination" style="display: none;"  id="nextF">next</div>
+        <div class="pagination" style="display: none;" id="prevF">prev</div>
+      </div>
+    </div>
+    <script src="{% static 'network/index.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+{% endblock %}
+
