@@ -48,9 +48,13 @@ a:hover{
     font-family: emoji !important;
     margin-top: 18px !important;
 }
+.assri{
+    display: flex;
+    justify-content: center;
+}
 .nv{
     display: block !important;
-    height: 100vh;
+    align-self: center;
     overflow: hidden;
 }
 .nv-ul{
@@ -332,7 +336,7 @@ a:hover{
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
-    height: 171px;
+    height: 400px;
     background: #e7e7e7;
     border-radius: 10px;
 }
@@ -352,4 +356,30 @@ a:hover{
 }
 .rund-follow::-webkit-scrollbar{
     display: none;
+}
+
+/*login*/
+
+.log{
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 70px;
+}
+.form-log{
+    margin-top: 70px;
+}
+.btn-sub{
+    background: white;
+    color: #007bff;
+    font-weight: bold;
+    border: none;
+    padding: 6px;
+    border-radius: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.cent{
+    align-self: center;
+    margin-top: 0;
 }
